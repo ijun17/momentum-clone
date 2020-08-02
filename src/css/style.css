@@ -1,0 +1,63 @@
+
+body {
+    color: white;
+    background-color: orange;
+    width: 200px;
+    margin: 0 auto;
+    text-align : center;
+}
+
+.css-clock{
+    font-size : xx-large;
+}
+
+.css-greetings{
+    text-align: center;
+
+    margin-top: 0px;
+    
+}
+
+.css-toDoList{
+    font-size: small;
+    text-align: center;
+}
+
+.css-weather{
+    font-size: x-small;
+    text-align: right;
+}
+
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.red{
+    color: red;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 1s linear;
+    filter: brightness(80%)
+}
