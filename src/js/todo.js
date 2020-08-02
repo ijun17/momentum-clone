@@ -31,7 +31,7 @@ function paintToDo(text){
     span.innerText = text;
     const newId = toDos.length + 1;
     li.id = newId;
-    delBtn.innerText = "delete";
+    delBtn.innerText = "Ⅹ";
     delBtn.addEventListener("click", deleteToDo);
     
     const toDoObj = {
@@ -45,7 +45,7 @@ function paintToDo(text){
 function handlerSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue);
+    if(currentValue!="")paintToDo(currentValue);
     toDoInput.value = "";
 }
 

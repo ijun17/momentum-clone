@@ -1,10 +1,16 @@
-const clockContainer = document.querySelector(".js-clock"),
-clockTitle = clockContainer.querySelector("h1");
+const clockTitle = document.querySelector(".js-clock");
+
+function getDoubleDigit(num){
+    if(num<10){
+        return `0${num}`;
+    }
+    return `${num}`;
+}
 
 function getTime(){
     const date = new Date();
-    const minutes = date.getMinutes();
-    const hours = date.getHours();
+    const minutes = getDoubleDigit(date.getMinutes());
+    const hours = getDoubleDigit(date.getHours());
     clockTitle.innerText = `${hours}:${minutes}`;
 }
 
